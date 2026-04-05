@@ -1,0 +1,52 @@
+body {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: #3498db;
+}
+
+.btn {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #0d6efd;
+}
+
+.btn-success {
+  color: white;
+  background-color: #198754;
+}
+
+.btn-failure {
+  color: white;
+  background-color: #dc3545;
+}
+
+nav {
+  background-color: #222;
+  padding: 10px;
+}
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+p {
+  line-height: 30px;
+  text-indent: 30px;
+  font-size: 0.75rem;
+}
+p a {
+  text-decoration: none;
+  color: tomato;
+}
+
+/*# sourceMappingURL=stye.css.map */
