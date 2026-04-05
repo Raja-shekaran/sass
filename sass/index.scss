@@ -1,5 +1,6 @@
 @use "variable" as vars;
 @use "buttons" as btns;
+@use "sass:map";
 
 body {
     font-size: vars.$base-font-size;
@@ -51,6 +52,6 @@ p {
     font-size: vars.$font-size-sm;
     a {
         text-decoration: none;
-        color: tomato;
+        color: map.get(vars.$colors, "failure");
     }
 }

@@ -9,9 +9,27 @@ $font-size-xl: $base-font-size * 2;
 $font-size-xxl: $base-font-size * 3;
 
 @use "sass:math";
+@use "sass:map";
 @debug "Testing Debug";
 @debug math.max(10px,4px,12px);
 @debug math.ceil(4.9);
 @debug math.floor(4.9);
 @debug math.round(4.4);
 @debug math.abs(-10px);
+@debug math.is-unitless(100px);//Throws a boolean
+@debug math.unit(100rem);//Throws unit or empty
+@debug math.compatible(2px,1em);
+@debug math.div(25,2);
+@debug math.random(100);
+@debug math.percentage(0.8);
+
+//Maps
+$colors:("primary": #0d6efd,
+"success": #198754,
+"failure": #dc3545);
+
+@debug map.get($colors, "primary");
+@debug map.has-key($colors, "failure");
+@debug map.has-key($colors, "danger");
+@debug map.remove($colors, "failure");
+@debug map.merge($colors, ("info": blue));
