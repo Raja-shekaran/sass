@@ -12,27 +12,6 @@ h1 {
   color: vars.$primary-color;
 }
 
-.btn {
-  border: none;
-  padding: 8px 20px;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  color: white;
-  background-color: btns.$bg-primary-color;
-}
-
-.btn-success {
-  color: white;
-  background-color: btns.$bg-success-color;
-}
-
-.btn-failure {
-  color: white;
-  background-color: btns.$bg-failure-color;
-}
-
 //Nested Rules
 
 nav {
@@ -44,6 +23,16 @@ nav {
     display: inline-block;
     padding: 5px 10px;
     color: #fff;
+    //Pseudo Selector
+    &:last-child {
+      color: #ffd000;
+    }
+    &:nth-child(2) {
+      color: #11aeec;
+    }
+    &:hover {
+      color: #a7e007;
+    }
   }
 }
 
@@ -122,4 +111,23 @@ p {
     color: #11aeec;
   }
   //   and or not
+}
+
+@mixin text-style {
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.title {
+  @include text-style();
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.para {
+  @include text-style();
+  font-style: italic;
+  text-align: justify;
 }
