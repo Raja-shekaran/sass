@@ -1,57 +1,125 @@
 @use "variable" as vars;
 @use "buttons" as btns;
 @use "sass:map";
+@use "sass:math";
 
 body {
-    font-size: vars.$base-font-size;
-    font-family: vars.$font-family;
+  font-size: vars.$base-font-size;
+  font-family: vars.$font-family;
 }
 
 h1 {
-    color: vars.$primary-color;
+  color: vars.$primary-color;
 }
 
 .btn {
-    border: none;
-    padding: 8px 20px;
-    border-radius: 5px;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
 }
 
 .btn-primary {
-    color: white;
-    background-color: btns.$bg-primary-color;
+  color: white;
+  background-color: btns.$bg-primary-color;
 }
 
 .btn-success {
-    color: white;
-    background-color: btns.$bg-success-color;
+  color: white;
+  background-color: btns.$bg-success-color;
 }
 
 .btn-failure {
-    color: white;
-    background-color: btns.$bg-failure-color;
+  color: white;
+  background-color: btns.$bg-failure-color;
 }
 
 //Nested Rules
 
 nav {
-    background-color: #222;
-    padding: 10px;
+  background-color: #222;
+  padding: 10px;
 
-    a {
-        text-decoration: none;
-        display: inline-block;
-        padding: 5px 10px;
-        color: #fff;
-    }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+  }
 }
 
 p {
-    line-height: 30px;
-    text-indent: 30px;
-    font-size: vars.$font-size-sm;
-    a {
-        text-decoration: none;
-        color: map.get(vars.$colors, "failure");
+  line-height: 30px;
+  text-indent: 30px;
+  font-size: vars.$font-size-sm;
+  a {
+    text-decoration: none;
+    color: map.get(vars.$colors, "failure");
+  }
+}
+
+@debug "Testing Debug";
+@debug math.max(10px, 4px, 12px);
+@debug math.ceil(4.9);
+@debug math.floor(4.9);
+@debug math.round(4.4);
+@debug math.abs(-10px);
+@debug math.is-unitless(100px); //Throws a boolean
+@debug math.unit(100rem); //Throws unit or empty
+@debug math.compatible(2px, 1em);
+@debug math.div(25, 2);
+@debug math.random(100);
+@debug math.percentage(0.8);
+
+@debug map.get(vars.$colors, "primary");
+@debug map.has-key(vars.$colors, "failure");
+@debug map.has-key(vars.$colors, "danger");
+@debug map.remove(vars.$colors, "failure");
+@debug map.merge(
+  vars.$colors,
+  (
+    "info": blue,
+  )
+);
+
+.text-white {
+  color: white;
+}
+
+//Each Loop
+
+@each $key, $val in vars.$colors {
+  .text-#{$key} {
+    color: $val;
+  }
+  .bg-#{$key} {
+    background-color: $val;
+  }
+  @for $i from 1 through 3 {
+    .text-#{$key}-light-#{$i} {
+      color: lighten($val, $i * 10);
     }
+    .text-#{$key}-dark-#{$i} {
+      color: darken($val, $i * 10);
+    }
+  }
+}
+
+// If Else
+.box-if {
+  width: vars.$width;
+  background-color: vars.$bg-color;
+  padding: 10px;
+
+  @if (vars.$bg-color==vars.$text-color) {
+    color: #fff;
+  } @else {
+    color: #a7e007;
+  }
+  @if (vars.$width>=600px) {
+    color: #ffd000;
+  }
+  @if (vars.$width<=300px) {
+    color: #11aeec;
+  }
+  //   and or not
 }

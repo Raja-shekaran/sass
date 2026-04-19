@@ -49,4 +49,111 @@ p a {
   color: #dc3545;
 }
 
+.text-white {
+  color: white;
+}
+
+.text-primary {
+  color: #0d6efd;
+}
+
+.bg-primary {
+  background-color: #0d6efd;
+}
+
+.text-primary-light-1 {
+  color: rgb(63.5819672131, 140.3073770492, 253.4180327869);
+}
+
+.text-primary-dark-1 {
+  color: rgb(1.762295082, 87.2336065574, 213.237704918);
+}
+
+.text-primary-light-2 {
+  color: rgb(114.1639344262, 170.6147540984, 253.8360655738);
+}
+
+.text-primary-dark-2 {
+  color: rgb(1.3442622951, 66.5409836066, 162.6557377049);
+}
+
+.text-primary-light-3 {
+  color: rgb(164.7459016393, 200.9221311475, 254.2540983607);
+}
+
+.text-primary-dark-3 {
+  color: rgb(0.9262295082, 45.8483606557, 112.0737704918);
+}
+
+.text-success {
+  color: #198754;
+}
+
+.bg-success {
+  background-color: #198754;
+}
+
+.text-success-light-1 {
+  color: rgb(32.96875, 178.03125, 110.775);
+}
+
+.text-success-dark-1 {
+  color: rgb(17.03125, 91.96875, 57.225);
+}
+
+.text-success-light-2 {
+  color: rgb(45.75, 216.25, 137.2);
+}
+
+.text-success-dark-2 {
+  color: rgb(9.0625, 48.9375, 30.45);
+}
+
+.text-success-light-3 {
+  color: rgb(88.78125, 224.21875, 161.425);
+}
+
+.text-success-dark-3 {
+  color: rgb(1.09375, 5.90625, 3.675);
+}
+
+.text-failure {
+  color: #dc3545;
+}
+
+.bg-failure {
+  background-color: #dc3545;
+}
+
+.text-failure-light-1 {
+  color: rgb(227.5316455696, 96.4683544304, 109.0253164557);
+}
+
+.text-failure-dark-1 {
+  color: rgb(189.2151898734, 32.7848101266, 47.7721518987);
+}
+
+.text-failure-light-2 {
+  color: rgb(235.0632911392, 139.9367088608, 149.0506329114);
+}
+
+.text-failure-dark-2 {
+  color: rgb(145.746835443, 25.253164557, 36.7974683544);
+}
+
+.text-failure-light-3 {
+  color: rgb(242.5949367089, 183.4050632911, 189.0759493671);
+}
+
+.text-failure-dark-3 {
+  color: rgb(102.2784810127, 17.7215189873, 25.8227848101);
+}
+
+.box-if {
+  width: 400px;
+  background-color: #333;
+  padding: 10px;
+  color: #a7e007;
+}
+
 /*# sourceMappingURL=stye.css.map */
