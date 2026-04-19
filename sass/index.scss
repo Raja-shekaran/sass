@@ -2,6 +2,7 @@
 @use "buttons" as btns;
 @use "sass:map";
 @use "sass:math";
+@import "./utilities";
 
 body {
   font-size: vars.$base-font-size;
@@ -113,9 +114,13 @@ p {
   //   and or not
 }
 
+@function px_to_rem($px) {
+  @return (calc($px/16)) + rem;
+}
+
 @mixin text-style {
   font-family: Arial;
-  font-size: 18px;
+  font-size: px_to_rem(18);
   line-height: 1.5;
   color: #333;
 }

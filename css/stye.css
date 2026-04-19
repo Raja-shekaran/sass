@@ -33,6 +33,66 @@
   background-color: #0000cc;
 }
 
+.button-success {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+}
+.button-success:hover {
+  background-color: #004d00;
+}
+
+.button-failure {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+}
+.button-failure:hover {
+  background-color: #cc0000;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-1 {
+  margin: 16px;
+}
+
+.m-2 {
+  margin: 32px;
+}
+
+.m-3 {
+  margin: 48px;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.p-3 {
+  padding: 30px;
+}
+
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
@@ -181,7 +241,7 @@ p a {
 
 .title {
   font-family: Arial;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5;
   color: #333;
   font-weight: bold;
@@ -190,7 +250,7 @@ p a {
 
 .para {
   font-family: Arial;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5;
   color: #333;
   font-style: italic;
